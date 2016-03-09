@@ -15,6 +15,8 @@ public class ColoredDiGraph {
 	public ColoredDiGraph(){
 		vertices = new HashSet<ColoredVertex>();
 		weights = new EdgeWeights();
+		successors = new HashMap<>();
+		predecessors = new HashMap<>();
 	}
 	
 	public void addVertex(ColoredVertex v){
@@ -43,6 +45,20 @@ public class ColoredDiGraph {
 			m += successors.get(v).size();
 		}
 		return m;	
+	}
+	
+	
+	
+	public HashSet<Integer> colors(){
+		HashSet<Integer> colors = new HashSet<>();
+		for (ColoredVertex v : vertices) {
+			colors.add(v.getColor());
+		}
+		return colors;	
+	}
+	
+	public int colNum(){
+		return colors().size();
 	}
 	
 }

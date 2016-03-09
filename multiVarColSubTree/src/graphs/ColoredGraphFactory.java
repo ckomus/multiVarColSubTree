@@ -6,7 +6,9 @@ import java.io.IOException;
 import java.util.HashMap;
 
 public class ColoredGraphFactory {
-
+	
+	// TODO add method for constructing random colored DAG, random colored Digraph 
+	
 	public static ColoredDiGraph coloredDiGraphFromFile(String  path){
 		ColoredDiGraph d = new ColoredDiGraph();
 		HashMap<Integer,ColoredVertex> idtovert = new HashMap<Integer,ColoredVertex>();
@@ -38,10 +40,10 @@ public class ColoredGraphFactory {
         	bufferedReader.close();
 		}
 		catch (IOException e) {
-			
+			System.out.println(e.getMessage());
 		}
 		catch (NumberFormatException e){
-			
+			System.out.println(e.getMessage());			
 		}
 
         return d;
