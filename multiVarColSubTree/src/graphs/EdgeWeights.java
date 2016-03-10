@@ -23,4 +23,8 @@ public class EdgeWeights {
 	public void removeEdgeWeight(ColoredVertex tail, ColoredVertex head){
 		weights.get(tail).remove(head);
 	}
+	
+	public Double getWeight(ColoredVertex tail, ColoredVertex head){
+		return weights.get(tail).get(head);
+	}
 }

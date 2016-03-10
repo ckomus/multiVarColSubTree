@@ -7,7 +7,7 @@ import java.util.HashMap;
 
 public class ColoredGraphFactory {
 	
-	// TODO add method for constructing random colored DAG, random colored Digraph 
+	// TODO add method for constructing random colored DAG and random colored Digraph 
 	
 	public static ColoredDiGraph coloredDiGraphFromFile(String  path){
 		ColoredDiGraph d = new ColoredDiGraph();
